@@ -1,7 +1,9 @@
 [
-    { "name": "Inicio", "path": "/" },
-    { "name": "Servicios", "path": "/servicios" },
-    { "name": "Nosotros", "path": "/nosotros" },
-    { "name": "Contacto", "path": "/contacto" }
+    { "name": "Fulfillment", "path": "#" },
+    { "name": "Warehousing", "path": "#" },
+    { "name": "Transloading", "path": "#" },
+    { "name": "Private Space", "path": "#" },
+    { "name": "About us", "path": "#"},
+    { "name": "Connect", "path": "#"}
   ]
   
