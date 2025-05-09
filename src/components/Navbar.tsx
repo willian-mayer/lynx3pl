@@ -4,12 +4,14 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react'; // También puedes usar @heroicons/react
 import Link from 'next/link';
-import routes from '@/data/routes.json'
+import routesJson from '@/data/routes.json'
+import { Route } from '@/types/routes'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-
+  const routes: Route[] = routesJson;
+  
   return (
     <nav className="bg-white shadow-md px-4 py-3 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
