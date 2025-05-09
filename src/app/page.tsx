@@ -9,7 +9,7 @@ export default function Home() {
     <>
     <div className="">
       <Navbar title="Lynx3PL" routes={routesJson as Route[]}/>
-      <Hero title={heroData.title} description={heroData.description}/> 
+      <Hero title={heroData.title} description={heroData.description} backgroundImage={heroData.backgroundImage}/> 
     </div>
     </>
   );
