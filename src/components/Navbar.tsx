@@ -4,13 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react'; // También puedes usar @heroicons/react
 import Link from 'next/link';
-
-const routes = [
-  { name: 'Inicio', path: '/' },
-  { name: 'Servicios', path: '/servicios' },
-  { name: 'Nosotros', path: '/nosotros' },
-  { name: 'Contacto', path: '/contacto' },
-];
+import routes from '@/data/routes.json'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
