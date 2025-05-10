@@ -1,7 +1,6 @@
-'use client';
+// Navbar.tsx
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { Route } from '@/types/routes';
@@ -14,17 +13,13 @@ type NavbarProps = {
 
 export default function Navbar({ logoUrl, routes }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
 
   return (
     <nav className="bg-black shadow-md px-4 py-3 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo / Título */}
-        <div
-          className="text-xl font-bold text-white cursor-pointer"
-          onClick={() => router.push('/')}
-        >
-          <Image 
+        <div className="text-xl font-bold text-white cursor-pointer">
+          <Image
             src={logoUrl}
             alt="Logo"
             width={120}
@@ -38,7 +33,7 @@ export default function Navbar({ logoUrl, routes }: NavbarProps) {
           {routes.map((route) => (
             <Link
               key={route.path}
-              href={route.path}
+              href={route.path === "#" && route.name === "Warehousing" ? "#warehouse" : route.path}
               className="text-white hover:text-blue-400 transition-colors font-semibold"
             >
               {route.name}
@@ -64,7 +59,7 @@ export default function Navbar({ logoUrl, routes }: NavbarProps) {
           {routes.map((route) => (
             <Link
               key={route.path}
-              href={route.path}
+              href={route.path === "#" && route.name === "Warehousing" ? "#warehouse" : route.path}
               className="text-white hover:text-blue-400 transition-colors font-semibold"
               onClick={() => setIsOpen(false)}
             >

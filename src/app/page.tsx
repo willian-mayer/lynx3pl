@@ -4,6 +4,8 @@ import routesJson from "@/data/routes.json";
 import Carousel from "@/components/Carousel";
 import { Route } from "@/types/routes";
 import AboutUs from "@/components/AboutUs";
+import Warehouse from "@/components/Warehouse";
+import warehouseData from "@/data/warehouse.json"
 
 export default function Home() {
   return (
@@ -19,9 +21,17 @@ export default function Home() {
       </section>
 
       <section className="snap-start">
+        <Warehouse
+          title={warehouseData.title}
+          description={warehouseData.description}
+          items={warehouseData.items}
+        />
+      </section>
+
+      <section className="snap-start">
         <Carousel />
       </section>
-      
+
       <section className="snap-start">
         <AboutUs />
       </section>

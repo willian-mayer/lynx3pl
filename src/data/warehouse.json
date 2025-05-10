@@ -1,0 +1,22 @@
+{
+    "title": "Our warehouse",
+    "description": "Our facility offers a variety of storage solutions to suit different needs: standard pallet storage, custom-sized racking, private individual rooms, and bulk storage for oversized items. Each option provides unique benefits based on customer requirements and operational priorities. Flexible infrastructure to handle growth and seasonal demand.",
+    "items": [
+      {
+        "image": "/warehouse/warehouse1.jpg",
+        "line1": "Efficiency",
+        "line2": "Accuracy"
+      },
+      {
+        "image": "/warehouse/warehouse2.jpg",
+        "line1": "Scalability",
+        "line2": "Technology-driven"
+      },
+      {
+        "image": "/warehouse/warehouse3.jpg",
+        "line1": "Safety & Compliance",
+        "line2": "Pricing"
+      }
+    ]
+  }
+  
