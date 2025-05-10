@@ -5,25 +5,32 @@ import { useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { Route } from '@/types/routes';
+import Image from 'next/image';
 
 type NavbarProps = {
-  title: string;
+  logoUrl: string;
   routes: Route[];
 };
 
-export default function Navbar({ title, routes }: NavbarProps) {
+export default function Navbar({ logoUrl, routes }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
   return (
-    <nav className="bg-white shadow-md px-4 py-3 sticky top-0 z-50">
+    <nav className="bg-black shadow-md px-4 py-3 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo / Título */}
         <div
-          className="text-xl font-bold text-gray-800 cursor-pointer"
+          className="text-xl font-bold text-white cursor-pointer"
           onClick={() => router.push('/')}
         >
-          {title}
+          <Image 
+            src={logoUrl}
+            alt="Logo"
+            width={120}
+            height={60}
+            className="object-contain"
+          />
         </div>
 
         {/* Menú escritorio */}
@@ -32,7 +39,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
             <Link
               key={route.path}
               href={route.path}
-              className="text-gray-700 hover:text-blue-600"
+              className="text-white hover:text-blue-400 transition-colors font-semibold"
             >
               {route.name}
             </Link>
@@ -41,7 +48,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
 
         {/* Botón hamburguesa */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -53,12 +60,12 @@ export default function Navbar({ title, routes }: NavbarProps) {
           isOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="flex flex-col space-y-2 bg-white px-4 pb-4">
+        <div className="flex flex-col space-y-2 bg-black px-4 pb-4">
           {routes.map((route) => (
             <Link
               key={route.path}
               href={route.path}
-              className="text-gray-700 hover:text-blue-600"
+              className="text-white hover:text-blue-400 transition-colors font-semibold"
               onClick={() => setIsOpen(false)}
             >
               {route.name}

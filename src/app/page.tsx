@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero";
 import heroData from "@/data/hero.json";
-import routesJson from "@/data/routes.json"; // Asegúrate de tener tus rutas en este archivo
+import routesJson from "@/data/routes.json";
 import Carousel from "@/components/Carousel";
-import { Route } from "@/types/routes"; // Importar el tipo de las rutas
+import { Route } from "@/types/routes";
 import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
@@ -13,13 +13,15 @@ export default function Home() {
           title={heroData.title}
           description={heroData.description}
           backgroundImage={heroData.backgroundImage}
-          routes={routesJson as Route[]} 
+          routes={routesJson as Route[]}
+          logoUrl="/logo.png" // Ruta pública del logo
         />
       </section>
 
       <section className="snap-start">
         <Carousel />
       </section>
+      
       <section className="snap-start">
         <AboutUs />
       </section>

@@ -1,21 +1,25 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Navbar from './Navbar'; // Importamos el navbar
-import { Route } from "@/types/routes"; // Importar tipo de las rutas
+import Navbar from './Navbar';
+import { Route } from "@/types/routes";
 
 type HeroProps = {
   title: string;
   description: string;
-  backgroundImage: string;
-  routes: Route[]; // Recibimos las rutas como prop
+  backgroundImage?: string;
+  backgroundVideo?: string;
+  routes: Route[];
+  logoUrl: string; // Nuevo prop
 };
 
 export default function Hero({
   title,
   description,
   backgroundImage,
+  backgroundVideo,
   routes,
+  logoUrl,
 }: HeroProps) {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -25,19 +29,33 @@ export default function Hero({
   }, []);
 
   return (
-    <section
-      className="relative w-full h-screen bg-cover bg-center text-white snap-start"
-      style={{
-        backgroundImage: `url('${backgroundImage}')`,
-      }}
-    >
-      {/* Navbar fijo en la parte superior, le pasamos las rutas */}
-      <div className="absolute top-0 left-0 w-full z-20">
-        <Navbar title="Lynx3PL" routes={routes} />  {/* Ahora recibe las rutas */}
-      </div>
+    <section className="relative w-full h-screen text-white snap-start overflow-hidden">
+      {/* Video o imagen de fondo */}
+      {backgroundVideo ? (
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+          Tu navegador no soporta videos HTML5.
+        </video>
+      ) : (
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: `url('${backgroundImage}')` }}
+        />
+      )}
 
-      {/* Fondo oscuro */}
+      {/* Filtro oscuro */}
       <div className="absolute inset-0 bg-black/50" />
+
+      {/* Navbar */}
+      <div className="absolute top-0 left-0 w-full z-20">
+        <Navbar logoUrl={logoUrl} routes={routes} />
+      </div>
 
       {/* Contenido */}
       <div className="relative z-10 flex flex-col justify-center items-center text-center px-4 h-full">
