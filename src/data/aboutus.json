@@ -1,0 +1,27 @@
+{
+    "title": "About Us",
+    "description": "We own our facility, ensuring zero risk of unexpected closures or inventory lockdowns by landlords. Our multilingual team enables seamless communication across borders. Strategically located to efficiently serve both East and West coasts. We offer choices of real-time WMS inventory monitoring, full eCommerce platform and multi-channel integration. Our facility boasts over 170,000 SF of high-capacity storage, tailored for large-scale needs.",
+    "testimonials": [
+      {
+        "quote": "Dependable. Shipped everything on time including last min changes.",
+        "author": "Yara Raun, Switzerland",
+        "year": 2024
+      },
+      {
+        "quote": "The office staff were very nice and accommodating when I inquired about the variety of services. Definitely worth checking out.",
+        "author": "Aaron Jarnigan, Georgia, USA",
+        "year": 2023
+      },
+      {
+        "quote": "I was fortunate to work with Lynx… Given more time and space, I have a wonderful story to share. You made me look like a hero handling ship’s propeller sale in Amsterdam.",
+        "author": "Tony Gaurducci, California, USA",
+        "year": 2025
+      },
+      {
+        "quote": "Customer Service is perfect; we appreciate it a lot because you know perfectly how to take care about your customers.",
+        "author": "Crotti International, Italy",
+        "year": 2024
+      }
+    ]
+  }
+  
