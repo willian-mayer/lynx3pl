@@ -1,5 +1,7 @@
 // Navbar.tsx
 
+'use client';
+
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
@@ -17,7 +19,7 @@ export default function Navbar({ logoUrl, routes }: NavbarProps) {
   return (
     <nav className="bg-black shadow-md px-4 py-3 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo / Título */}
+        {/* Logo */}
         <div className="text-xl font-bold text-white cursor-pointer">
           <Image
             src={logoUrl}
@@ -28,12 +30,12 @@ export default function Navbar({ logoUrl, routes }: NavbarProps) {
           />
         </div>
 
-        {/* Menú escritorio */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
           {routes.map((route) => (
             <Link
               key={route.path}
-              href={route.path === "#" && route.name === "Warehousing" ? "#warehouse" : route.path}
+              href={route.path}
               className="text-white hover:text-blue-400 transition-colors font-semibold"
             >
               {route.name}
@@ -41,7 +43,7 @@ export default function Navbar({ logoUrl, routes }: NavbarProps) {
           ))}
         </div>
 
-        {/* Botón hamburguesa */}
+        {/* Hamburger Button */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -49,7 +51,7 @@ export default function Navbar({ logoUrl, routes }: NavbarProps) {
         </div>
       </div>
 
-      {/* Menú móvil animado */}
+      {/* Mobile Menu */}
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
           isOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
@@ -59,7 +61,7 @@ export default function Navbar({ logoUrl, routes }: NavbarProps) {
           {routes.map((route) => (
             <Link
               key={route.path}
-              href={route.path === "#" && route.name === "Warehousing" ? "#warehouse" : route.path}
+              href={route.path}
               className="text-white hover:text-blue-400 transition-colors font-semibold"
               onClick={() => setIsOpen(false)}
             >

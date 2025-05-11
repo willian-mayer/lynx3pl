@@ -1,9 +1,9 @@
 [
-    { "name": "Fulfillment", "path": "#" },
-    { "name": "Warehousing", "path": "#" },
-    { "name": "Transloading", "path": "#" },
-    { "name": "Private Space", "path": "#" },
-    { "name": "About us", "path": "#"},
-    { "name": "Connect", "path": "#"}
-  ]
-  
+  { "name": "Fulfillment", "path": "#fulfillment" },
+  { "name": "Warehousing", "path": "#warehouse" },
+  { "name": "Transloading", "path": "#transloading" },
+  { "name": "How It Works", "path": "#how-it-works" },
+  { "name": "Private Space", "path": "#private-space" },
+  { "name": "About us", "path": "#about-us" },
+  { "name": "Connect", "path": "#connect" }
+]

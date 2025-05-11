@@ -1,0 +1,18 @@
+{
+    "title": "How It Works",
+"description": "Get your products shipped quickly, accurately, and cost-effectively—no matter the size of your business. Fulfillment can be time-consuming and complex, but we make it simple. From inventory management to packing and shipping, we handle it all so you can stay focused on growing your business.",    "steps": [
+      {
+        "highlight": "Step 1:",
+        "text": " Send your products to our warehouse."
+      },
+      {
+        "highlight": "Step 2:",
+        "text": " We store, pack, and ship your orders."
+      },
+      {
+        "highlight": "Step 3:",
+        "text": "You track shipments and manage your inventory online."
+      }
+    ]
+  }
+  

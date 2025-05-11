@@ -6,6 +6,8 @@ import { Route } from "@/types/routes";
 import AboutUs from "@/components/AboutUs";
 import Warehouse from "@/components/Warehouse";
 import warehouseData from "@/data/warehouse.json"
+import HowWeWork from "@/components/HowWeWork";
+import howWeWorkData from "@/data/how-we-work.json"
 
 export default function Home() {
   return (
@@ -34,6 +36,11 @@ export default function Home() {
 
       <section className="snap-start">
         <AboutUs />
+      </section>
+      <section className="snap-start">
+        <HowWeWork title={howWeWorkData.title}
+    description={howWeWorkData.description}
+    steps={howWeWorkData.steps} />
       </section>
     </div>
   );
