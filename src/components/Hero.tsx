@@ -5,12 +5,12 @@ import Navbar from './Navbar';
 import { Route } from "@/types/routes";
 
 type HeroProps = {
-  title: string;
-  description: string;
+  title: string;  // Asegurándote de que se reciba el título
+  description: string;  // Asegurándote de que se reciba la descripción
   backgroundImage?: string;
   backgroundVideo?: string;
   routes: Route[];
-  logoUrl: string; // Nuevo prop
+  logoUrl: string;
 };
 
 export default function Hero({
@@ -38,6 +38,7 @@ export default function Hero({
           muted
           loop
           playsInline
+          poster={backgroundImage}
         >
           <source src={backgroundVideo} type="video/mp4" />
           Tu navegador no soporta videos HTML5.
@@ -52,7 +53,7 @@ export default function Hero({
       {/* Filtro oscuro */}
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Navbar */}
+      {/* Navbar con solo logo */}
       <div className="absolute top-0 left-0 w-full z-20">
         <Navbar logoUrl={logoUrl} routes={routes} />
       </div>
@@ -64,14 +65,14 @@ export default function Hero({
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
         >
-          {title}
+          {title}  {/* Título del Hero */}
         </h1>
         <p
           className={`text-lg md:text-xl transition-all duration-1000 ease-out transform delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          {description}
+          {description}  {/* Descripción del Hero */}
         </p>
       </div>
     </section>

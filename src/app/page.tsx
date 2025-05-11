@@ -1,22 +1,20 @@
 import Hero from "@/components/Hero";
 import heroData from "@/data/hero.json";
 import routesJson from "@/data/routes.json";
-import Carousel from "@/components/Carousel";
 import { Route } from "@/types/routes";
-import AboutUs from "@/components/AboutUs";
 import Warehouse from "@/components/Warehouse";
-import warehouseData from "@/data/warehouse.json"
+import warehouseData from "@/data/warehouse.json";
 import HowWeWork from "@/components/HowWeWork";
-import howWeWorkData from "@/data/how-we-work.json"
+import howWeWorkData from "@/data/how-we-work.json";
 
 export default function Home() {
   return (
     <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
       <section className="snap-start">
         <Hero
-          title={heroData.title}
+        title={heroData.title}
           description={heroData.description}
-          backgroundImage={heroData.backgroundImage}
+          backgroundVideo="/video/warehouse.mp4" // Ruta pública del video
           routes={routesJson as Route[]}
           logoUrl="/logo.png" // Ruta pública del logo
         />
@@ -29,18 +27,12 @@ export default function Home() {
           items={warehouseData.items}
         />
       </section>
-
       <section className="snap-start">
-        <Carousel />
-      </section>
-
-      <section className="snap-start">
-        <AboutUs />
-      </section>
-      <section className="snap-start">
-        <HowWeWork title={howWeWorkData.title}
-    description={howWeWorkData.description}
-    steps={howWeWorkData.steps} />
+        <HowWeWork
+          title={howWeWorkData.title}
+          description={howWeWorkData.description}
+          steps={howWeWorkData.steps}
+        />
       </section>
     </div>
   );
