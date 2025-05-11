@@ -1,0 +1,21 @@
+{
+    "title": "Why choose us",
+    "description": "Our logistics solutions are tailored to meet the evolving demands of modern commerce. Whether you're shipping across town or across the globe, our services deliver performance and peace of mind.",
+    "services": [
+      {
+        "title": "Fulfillment",
+        "description": "Efficient order picking, packing, and shipping to ensure customer satisfaction and fast delivery.",
+        "imageUrl": "/services/fulfillment.jpg"
+      },
+      {
+        "title": "Warehousing",
+        "description": "Secure and scalable storage options for your inventory with real-time tracking and climate control.",
+        "imageUrl": "/services/warehousing.jpg"
+      },
+      {
+        "title": "Transloading",
+        "description": "Streamlined transfer of goods between transportation modes, reducing handling time and cost.",
+        "imageUrl": "/services/transloading.jpg"
+      }
+    ]
+  }

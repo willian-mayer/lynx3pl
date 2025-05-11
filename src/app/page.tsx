@@ -7,20 +7,29 @@ import warehouseData from "@/data/warehouse.json";
 import HowWeWork from "@/components/HowWeWork";
 import howWeWorkData from "@/data/how-we-work.json";
 import AboutUs from "@/components/AboutUs";
-import aboutUsData from "@/data/aboutus.json"
+import aboutUsData from "@/data/aboutus.json";
+import servicesData from "@/data/services.json";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
     <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
       <section className="snap-start">
         <Hero
-        title={heroData.title}
+          title={heroData.title}
           description={heroData.description}
           backgroundVideo="/video/warehouse.mp4" // Ruta pública del video
           routes={routesJson as Route[]}
           logoUrl="/logo.png" // Ruta pública del logo
         />
       </section>
+        <section className="snap-start">
+          <Services
+            title={servicesData.title}
+            description={servicesData.description}
+            services={servicesData.services}
+          />
+        </section>
 
       <section className="snap-start">
         <Warehouse
@@ -37,12 +46,12 @@ export default function Home() {
         />
       </section>
       <section className="snap-start">
-  <AboutUs
-    title={aboutUsData.title}
-    description={aboutUsData.description}
-    testimonials={aboutUsData.testimonials}
-  />
-</section>
+        <AboutUs
+          title={aboutUsData.title}
+          description={aboutUsData.description}
+          testimonials={aboutUsData.testimonials}
+        />
+      </section>
     </div>
   );
 }

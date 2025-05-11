@@ -17,7 +17,7 @@ type AboutUsProps = {
 
 export default function AboutUs({ title, description, testimonials }: AboutUsProps) {
   return (
-    <section className="h-screen w-full bg-white text-black snap-start flex flex-col">
+    <section id="about-us" className="h-screen w-full bg-white text-black snap-start flex flex-col">
       {/* Imagen superior (1/3) */}
       <div className="h-1/3 relative w-full">
         <Image
