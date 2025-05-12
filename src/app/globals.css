@@ -24,3 +24,46 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.clip-diagonal-lg,
+.clip-diagonal-green-lg {
+  clip-path: none;
+}
+
+/* Solo en pantallas grandes o mayores */
+@media (min-width: 1024px) {
+  .clip-diagonal-lg {
+    clip-path: polygon(0 0, 95% 0, 82% 100%, 0% 100%);
+
+
+  }
+
+  .clip-diagonal-green-lg {
+    clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Corte para pantalla grande - imagen invertida */
+.clip-diagonal-lg-reverse {
+  clip-path: polygon(20.3% 0, 100% 0, 100% 100%, 8.3% 100%);
+
+
+}
+
+.clip-diagonal-green-lg-reverse {
+  clip-path: polygon(15.3% 0, 100% 0, 100% 100%, 3% 100%);
+
+}
+}
+
+@media (min-width: 1024px) {
+  .clip-diagonal-transloading {
+    clip-path: polygon(8.1% 0, 100% 0, 100% 100%, 17% 100%);
+  }
+
+  .clip-diagonal-green-transloading {
+    clip-path: polygon(3% 0, 100% 0, 100% 100%, 13% 100%);
+  }
+}

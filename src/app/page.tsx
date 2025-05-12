@@ -10,6 +10,10 @@ import AboutUs from "@/components/AboutUs";
 import aboutUsData from "@/data/aboutus.json";
 import servicesData from "@/data/services.json";
 import Services from "@/components/Services";
+import Fulfillment from "@/components/Fulfillment";
+import fulfillmentData from "@/data/fulfillment.json";
+import Transloading from "@/components/Transloading";
+import transloadingData from "@/data/transloading.json";
 
 export default function Home() {
   return (
@@ -23,19 +27,33 @@ export default function Home() {
           logoUrl="/logo.png" // Ruta pública del logo
         />
       </section>
-        <section className="snap-start">
-          <Services
-            title={servicesData.title}
-            description={servicesData.description}
-            services={servicesData.services}
-          />
-        </section>
+      <section className="snap-start">
+        <Services
+          title={servicesData.title}
+          description={servicesData.description}
+          services={servicesData.services}
+        />
+      </section>
+      <section className="snap-start">
+        <Fulfillment
+          title={fulfillmentData.title}
+          description={fulfillmentData.description}
+          imageUrl={fulfillmentData.imageUrl}
+        />
+      </section>
 
       <section className="snap-start">
         <Warehouse
           title={warehouseData.title}
           description={warehouseData.description}
-          items={warehouseData.items}
+          imageUrl={warehouseData.imageUrl}
+        />
+      </section>
+      <section className="snap-start">
+        <Transloading
+          title={transloadingData.title}
+          description={transloadingData.description}
+          imageUrl={transloadingData.imageUrl}
         />
       </section>
       <section className="snap-start">

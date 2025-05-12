@@ -15,7 +15,10 @@ type ServicesProps = {
 
 export default function Services({ title, description, services }: ServicesProps) {
   return (
-    <div id="services" className="h-screen px-4 md:px-16 py-10 flex flex-col">
+    <div
+      id="services"
+      className="min-h-screen lg:h-screen px-4 md:px-16 py-10 flex flex-col" // Usamos min-h-screen para pantallas pequeñas y h-screen para pantallas medianas y grandes
+    >
       {/* Parte superior: Título + descripción */}
       <div className="flex flex-col items-center text-center flex-grow justify-end">
         <h2 className="text-3xl md:text-5xl font-bold mb-4">{title}</h2>
@@ -46,6 +49,8 @@ export default function Services({ title, description, services }: ServicesProps
           ))}
         </div>
       </div>
+      {/* Espacio adicional para evitar solapamiento */}
+      <div className="h-16 md:h-24"></div> {/* Este div da un espaciado suficiente al final */}
     </div>
   );
 }

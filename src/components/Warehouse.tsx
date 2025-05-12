@@ -1,45 +1,38 @@
-'use client';
+import React from "react";
 
-import Image from 'next/image';
-
-type Item = {
-  image: string;
-  line1: string;
-  line2: string;
-};
-
-type WarehouseProps = {
+interface WarehouseProps {
   title: string;
-  description: string;
-  items: Item[];
-};
+  description: string[];
+  imageUrl: string;
+}
 
-export default function Warehouse({ title, description, items }: WarehouseProps) {
+const Warehouse: React.FC<WarehouseProps> = ({ title, description, imageUrl }) => {
   return (
-    <section id="warehouse" className="lg:h-screen bg-white text-black flex items-center justify-center px-4 py-10">
-      <div className="max-w-7xl w-full text-center">
-        <h2 className="text-4xl md:text-6xl font-bold mb-6">{title}</h2>
-        <p className="text-base md:text-xl mb-12 max-w-4xl mx-auto">{description}</p>
+    <section className="h-screen w-full flex flex-col lg:flex-row-reverse overflow-hidden relative">
+      {/* Right: Image with green overlay */}
+      <div className="relative w-full lg:w-3/5 h-1/2 lg:h-full">
+        {/* Green overlay */}
+        <div className="absolute inset-0 bg-green-900 z-0 clip-diagonal-green-lg-reverse" />
 
-        {/* Modo lista en todas las pantallas */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
-          {items.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-start">
-              <Image
-                src={item.image}
-                alt={item.line1}
-                width={600}  // Tamaño base para pantallas pequeñas y medianas
-                height={400} // Tamaño base para pantallas pequeñas y medianas
-                className="rounded-lg object-cover md:w-[600px] md:h-[400px] xl:w-[800px] xl:h-[600px]" // Mayor tamaño para pantallas grandes y extra grandes
-              />
-              <div className="mt-4 text-center w-full px-2">
-                <p className="text-lg font-semibold">{item.line1}</p>
-                <p className="text-lg font-semibold">{item.line2}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Image */}
+        <img
+          src={imageUrl}
+          alt="Warehouse Service"
+          className="absolute inset-0 w-full h-full object-cover z-10 clip-diagonal-lg-reverse"
+        />
+      </div>
+
+      {/* Left: Text */}
+      <div className="w-full lg:w-2/5 h-1/2 lg:h-full bg-white flex flex-col justify-center p-6 lg:p-12 z-20">
+        <h2 className="text-3xl lg:text-5xl font-bold text-green-900 mb-6">{title}</h2>
+        {description.map((para, idx) => (
+          <p key={idx} className="mb-4 text-gray-700 leading-relaxed text-base lg:text-lg">
+            {para}
+          </p>
+        ))}
       </div>
     </section>
   );
-}
+};
+
+export default Warehouse;
