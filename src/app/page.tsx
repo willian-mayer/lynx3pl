@@ -4,8 +4,6 @@ import routesJson from "@/data/routes.json";
 import { Route } from "@/types/routes";
 import Warehouse from "@/components/Warehouse";
 import warehouseData from "@/data/warehouse.json";
-import HowWeWork from "@/components/HowWeWork";
-import howWeWorkData from "@/data/how-we-work.json";
 import AboutUs from "@/components/AboutUs";
 import aboutUsData from "@/data/aboutus.json";
 import servicesData from "@/data/services.json";
@@ -14,6 +12,8 @@ import Fulfillment from "@/components/Fulfillment";
 import fulfillmentData from "@/data/fulfillment.json";
 import Transloading from "@/components/Transloading";
 import transloadingData from "@/data/transloading.json";
+import Benefits from "@/components/Benefits";
+import benefitsData from "@/data/benefits.json"
 
 export default function Home() {
   return (
@@ -57,11 +57,12 @@ export default function Home() {
         />
       </section>
       <section className="snap-start">
-        <HowWeWork
-          title={howWeWorkData.title}
-          description={howWeWorkData.description}
-          steps={howWeWorkData.steps}
-        />
+      <Benefits
+        title={benefitsData.title}
+        description={benefitsData.description}
+        benefits={benefitsData.benefits}
+        imageUrl={benefitsData.imageUrl}
+      />
       </section>
       <section className="snap-start">
         <AboutUs

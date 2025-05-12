@@ -8,7 +8,7 @@ interface TransloadingProps {
 
 const Transloading: React.FC<TransloadingProps> = ({ title, description, imageUrl }) => {
   return (
-    <section className="h-screen w-full flex flex-col lg:flex-row overflow-hidden relative">
+    <section id="transloading" className="h-screen w-full flex flex-col lg:flex-row overflow-hidden relative">
       {/* Left: Text */}
       <div className="w-full lg:w-2/5 h-1/2 lg:h-full bg-white flex flex-col justify-center p-6 lg:p-12 z-20">
         <h2 className="text-3xl lg:text-5xl font-bold text-green-900 mb-6">{title}</h2>

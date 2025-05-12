@@ -3,7 +3,7 @@
   { "name": "Fulfillment", "path": "#fulfillment" },
   { "name": "Warehousing", "path": "#warehouse" },
   { "name": "Transloading", "path": "#transloading" },
-  { "name": "How It Works", "path": "#how-it-works" },
+  { "name": "Benefits", "path": "#benefits" },
   { "name": "About Us", "path": "#about-us" },
-  { "name": "Connect", "path": "#connect" }
+  { "name": "Contact Us", "path": "#contact-us" }
 ]

@@ -8,7 +8,7 @@ interface WarehouseProps {
 
 const Warehouse: React.FC<WarehouseProps> = ({ title, description, imageUrl }) => {
   return (
-    <section className="h-screen w-full flex flex-col lg:flex-row-reverse overflow-hidden relative">
+    <section id="warehouse" className="h-screen w-full flex flex-col lg:flex-row-reverse overflow-hidden relative">
       {/* Right: Image with green overlay */}
       <div className="relative w-full lg:w-3/5 h-1/2 lg:h-full">
         {/* Green overlay */}
