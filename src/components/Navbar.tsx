@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import type { Route } from "../types/routes"; // Ajusta la ruta según tu estructura
+import { Link } from "react-router-dom";
 
 type NavbarProps = {
   title: string;
@@ -27,13 +28,13 @@ export default function Navbar({ title, routes }: NavbarProps) {
         {/* Menú escritorio */}
         <div className="hidden md:flex space-x-6">
           {routes.map((route) => (
-            <a
+            <Link
               key={route.path}
-              href={route.path}
+              to={route.path}
               className="text-white font-bold hover:text-blue-600"
             >
               {route.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -57,14 +58,14 @@ export default function Navbar({ title, routes }: NavbarProps) {
       >
         <div className="flex flex-col space-y-2 bg-black px-4 pb-4">
           {routes.map((route) => (
-            <a
+            <Link
               key={route.path}
-              href={route.path}
+              to={route.path}
               className="text-white font-bold hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
               {route.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
