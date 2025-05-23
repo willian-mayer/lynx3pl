@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Título y descripción centrados */}
       <div className="flex-1 flex flex-col items-center justify-center text-center">
         <motion.h1
-          className="font-bold text-gray-900 mb-4 text-[32px] sm:text-[40px] md:text-[60px] lg:text-[80px] xl:text-[100px] leading-tight"
+          className="font-bold text-gray-900 mb-4 text-5xl sm:text-[40px] md:text-[60px] lg:text-[80px] xl:text-[100px] leading-tight"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

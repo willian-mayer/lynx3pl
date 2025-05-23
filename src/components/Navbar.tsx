@@ -12,7 +12,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black shadow-md sticky top-0 z-50 px-2">
+    <nav className="bg-black shadow-md absolute top-0 left-0 right-0 z-50 px-2">
       <div className="max-w-7xl mx-auto flex items-center justify-between sm:mx-8 md:mx-24 lg:mx-48 xl:mx-72">
         {/* Logo / Título */}
         <a href="/" className="cursor-pointer">
