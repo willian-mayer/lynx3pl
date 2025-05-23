@@ -42,16 +42,17 @@ const ContactForm: React.FC<ContactFormProps> = ({ data }) => {
 
           {/* Right Side - Form */}
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-            <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
+            <div className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12 focus:border-blue-200">
               <form>
-                <ContactInputBox type="text" name="name" placeholder="Your Name" />
+                <ContactInputBox type="text" name="firstname" placeholder="Your First Name" />
+                <ContactInputBox type="text" name="lastname" placeholder="Your Last Name" />
                 <ContactInputBox type="email" name="email" placeholder="Your Email" />
                 <ContactInputBox type="tel" name="phone" placeholder="Your Phone" />
                 <ContactTextArea row={6} placeholder="Your Message" name="details" defaultValue="" />
-                <div>
+                <div className="flex justify-center">
                   <button
                     type="submit"
-                    className="w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90"
+                    className="w-max rounded border bg-black p-3 text-white font-semibold rounded-xl transition px-5"
                   >
                     Send Message
                   </button>
@@ -83,11 +84,12 @@ const ContactTextArea = ({
       rows={row}
       placeholder={placeholder}
       name={name}
-      className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
       defaultValue={defaultValue}
+      className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-blue-200 focus:ring-1 focus:ring-blue-400 dark:border-dark-3 dark:bg-dark dark:text-dark-6"
     />
   </div>
 );
+
 
 const ContactInputBox = ({
   type,
@@ -103,7 +105,8 @@ const ContactInputBox = ({
       type={type}
       placeholder={placeholder}
       name={name}
-      className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+      className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-blue-200 focus:ring-1 focus:ring-blue-400 dark:border-dark-3 dark:bg-dark dark:text-dark-6"
     />
   </div>
 );
+
