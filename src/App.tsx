@@ -7,10 +7,13 @@ import AboutUs from './pages/AboutUs'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 
+import type { Route as AppRoute } from './types/routes'
+const routes: AppRoute[] = routesJson
+
 function App() {
   return (
     <>
-      <Navbar title="Lynx3PL" routes={routesJson}/>
+      <Navbar title="Lynx3PL" routes={routes}/>
       <main>
         <Routes>
           <Route path='/' element={<Home />}/>
