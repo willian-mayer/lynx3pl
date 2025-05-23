@@ -6,32 +6,32 @@
             {
                 "name": "Efficiency",
                 "desc": "Optimized processes to minimize delays and maximize productivity.",
-                "logo": ""
+                "logo": "/warehousing/gear.svg"
             },
             {
                 "name": "Accuracy",
                 "desc": "Reliable inventory tracking to prevent errors and improve order fulfillment.",
-                "logo": ""
+                "logo": "/warehousing/target.svg"
             },
             {
                 "name": "Scalability",
                 "desc": "Flexible infrastructure to handle growth and seasonal demand.",
-                "logo": ""
+                "logo": "/warehousing/chart-line-up.svg"
             },
             {
                 "name": "Technology",
                 "desc": "Integration of automation, and data analytics for smarter operations.",
-                "logo": ""
+                "logo": "/warehousing/cpu.svg"
             },
             {
                 "name": "Safety & Compliance",
                 "desc": "A secure environment that meets industry regulations and worker safety standards.",
-                "logo": ""
+                "logo": "/warehousing/shield-check.svg"
             },
             {
                 "name": "Pricing",
                 "desc": "Providing transparent, competitive rates to keep your costs low.",
-                "logo": ""
+                "logo": "/warehousing/currency-circle-dollar.svg"
             }
         ]
     }
