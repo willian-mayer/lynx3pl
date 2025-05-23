@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 
 import type { Route as AppRoute } from './types/routes'
+import Footer from './components/Footer'
 const routes: AppRoute[] = routesJson
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/contact' element={<Contact />}/>
         </Routes>
       </main>
+      <Footer links={routes} />
     </>
   )
 }

@@ -7,7 +7,7 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({ data }) => {
   return (
-    <section className=" relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px] px-4">
+    <section className="h-screen relative z-10 overflow-hidden bg-white py-20  lg:py-[120px] px-4">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap lg:justify-between">
           {/* Left Side - Info */}
@@ -16,10 +16,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ data }) => {
               <span className="mb-4 block text-base font-semibold text-primary">
                 {data.brieftitle}
               </span>
-              <h2 className="mb-6 text-[32px] font-bold uppercase text-dark dark:text-white sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+              <h2 className="mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                 {data.title}
               </h2>
-              <p className="mb-9 text-base leading-relaxed text-body-color dark:text-dark-6">
+              <p className="mb-9 text-base leading-relaxed text-body-color ">
                 {data.description}
               </p>
               {data.items.map((item, idx) => (
@@ -28,10 +28,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ data }) => {
                     <img src={item.imgUrl} alt={item.name} className="w-6 h-6" />
                   </div>
                   <div className="w-full">
-                    <h4 className="mb-1 text-xl font-bold text-dark dark:text-white">
+                    <h4 className="mb-1 text-xl font-bold ">
                       {item.name}
                     </h4>
-                    <p className="text-base text-body-color dark:text-dark-6">
+                    <p className="text-base text-body-color ">
                       {item.desc}
                     </p>
                   </div>
@@ -85,7 +85,7 @@ const ContactTextArea = ({
       placeholder={placeholder}
       name={name}
       defaultValue={defaultValue}
-      className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-blue-200 focus:ring-1 focus:ring-blue-400 dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+      className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-blue-200 focus:ring-1 focus:ring-blue-400 "
     />
   </div>
 );
@@ -105,7 +105,7 @@ const ContactInputBox = ({
       type={type}
       placeholder={placeholder}
       name={name}
-      className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-blue-200 focus:ring-1 focus:ring-blue-400 dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+      className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-blue-200 focus:ring-1 focus:ring-blue-400 "
     />
   </div>
 );
