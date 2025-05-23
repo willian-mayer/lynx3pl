@@ -11,16 +11,16 @@ export default function Navbar({ title, routes }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black shadow-md px-4 sticky top-0 z-50">
+    <nav className="bg-black shadow-md sticky top-0 z-50 px-2">
       <div className="max-w-7xl mx-auto flex items-center justify-between sm:mx-8 md:mx-24 lg:mx-48 xl:mx-72">
         {/* Logo / Título */}
         <a href="/" className="cursor-pointer">
           <img
             src="/logo.png"
             alt={title}
-            width={80}
-            height={80}
-            className="h-20 w-auto"
+            width={10}
+            height={10}
+            className="h-14 w-auto"
           />
         </a>
 
@@ -41,7 +41,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white font-bold"
+            className="text-white font-bold "
             aria-label="Menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
