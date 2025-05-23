@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <Navbar title="Lynx3PL" routes={routesJson}/>
-      <h1>Hello world!</h1>
     </>
   )
 }
