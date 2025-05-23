@@ -1,8 +1,12 @@
 {
-  "title": "Soluciones logísticas integrales para tu negocio",
-  "description": "En Lynx3PL optimizamos tu cadena de suministro con tecnología, eficiencia y confianza.",
+  "title": "Reliable fulfillment",
+  "description": "B2B, FBA, FBM, and more.",
   "rating": {
-    "author": "Carlos M.",
-    "quote": "Gracias a Lynx3PL hemos mejorado nuestros tiempos de entrega en un 40%."
+    "author": "Daisy D.",
+    "quote": "Reasonable price and professional service."
+  },
+  "contact": {
+    "title": "New project?",
+    "url": "/contact"
   }
 }
