@@ -1,0 +1,24 @@
+[
+  {
+    "brieftitle": "Contact Us",
+    "title": "Get in touch with us",
+    "description": "if you are interested in: warehousing/storage, cross-docking, transloading, packing, assembling, shipping/logistics, eCommerce, FMA service, FBM service, B2B, event space, temp or private space",
+    "items": [
+      {
+        "name": "Our Location",
+        "desc": "1031 South Hamilton Street Dalton, GA 30720, USA",
+        "imgUrl": "/contact/map-pin-area.svg"
+      },
+      {
+        "name": "Call Us",
+        "desc": "1-705-529-7878",
+        "imgUrl": "/contact/phone.svg"
+      },
+      {
+        "name": "Email Us",
+        "desc": "info@lynx3pl.com",
+        "imgUrl": "/contact/envelope-simple.svg"
+      }
+    ]
+  }
+]
