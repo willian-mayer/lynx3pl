@@ -9,8 +9,8 @@ import Home from './pages/Home'
 import type { Route as AppRoute } from './types/routes'
 import Footer from './components/Footer'
 import Warehousing from './pages/Warehousing'
-import Fulfillment from './pages/Fulfillment'
 import Transloading from './pages/Transloading'
+import FulfillmentPage from './pages/Fulfillment'
 const routes: AppRoute[] = routesJson
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/warehousing' element={<Warehousing />} />
-          <Route path='/fulfillment' element={<Fulfillment />} />
+          <Route path='/fulfillment' element={<FulfillmentPage />} />
           <Route path='/transloading' element={<Transloading />} />
           <Route path='/about-us' element={<AboutUs />}/>
           <Route path='/contact' element={<Contact />}/>

@@ -1,7 +1,9 @@
-function Fulfillment() {
+import Fulfillment from "../components/Fulfillment"
+
+function FulfillmentPage() {
   return (
-    <div className='h-screen'>Fulfillment</div>
+    <Fulfillment />
   )
 }
 
-export default Fulfillment
+export default FulfillmentPage
