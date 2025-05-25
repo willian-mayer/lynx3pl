@@ -1,0 +1,55 @@
+[
+    {
+        "title": "Effortless Fulfillment Services to Streamline Your Business",
+        "description": "Get your products shipped to customers quickly, accurately, and cost-effectively, for businesses of all sizes.",
+        "how-works": [
+            {
+                "desc": "Managing fulfillment can be stressful and time-consuming.We take care of inventory, packing, and shipping, so you can focus on growing your business.",
+                "steps": [
+                    {
+                        "name": "Step 1",
+                        "content": "Send your products to our warehouse."
+                    },
+                    {
+                        "name": "Step 2",
+                        "content": "We store, pack, and ship your orders."
+                    },
+                    {
+                        "name": "Step 3",
+                        "content": "You track shipments and manage your inventory online."
+                    }
+                ]
+            }
+        ],
+        "items": [
+            {
+                "name": "Order Processing",
+                "content": "Same-day shipping, real-time tracking"
+            },
+            {
+                "name": "Packaging",
+                "content": "Offer branded or custom packaging and boxes"
+            },
+            {
+                "name": "Software Integration",
+                "content": "integrations with e-commerce platforms, such as Shopify, Walmart, Amazon, and more)."
+            },
+            {
+                "name": "Inventory Management",
+                "content": "Swe keep track of your stock & notify you to prevent inventory shortages."
+            },
+            {
+                "name": "Real-Time Updates",
+                "content": "monitor your shipment and performance in real –time."
+            },
+            {
+                "name": "Customer Support",
+                "content": "Dedicated multilingual team to assist you with seamless communication."
+            },
+            {
+                "name": "FBA and FBM",
+                "content": "Hassle-free, we handle it all!"
+            }
+        ]
+    }
+]

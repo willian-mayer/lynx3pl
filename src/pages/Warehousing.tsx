@@ -18,7 +18,7 @@ const Warehousing: React.FC = () => {
   const data: WarehousingData = warehousingData[0];
 
   return (
-    <section className="flex flex-col lg:justify-center">
+    <section className="flex flex-col lg:justify-center ">
       {/* Parte 1: Imagen (1/2 de la pantalla en lg) */}
       <div className="w-full h-[50vh] lg:h-10px">
         <img
